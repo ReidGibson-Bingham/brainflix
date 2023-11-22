@@ -3,14 +3,15 @@ import { Fragment } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.scss'
-import Nav from './components/nav'
+import Header from './components/Nav/Header'
 
 function App() {
   // const [count, setCount] = useState(0)
   return (
     <>
 
-      <Nav/>
+
+      <Header/>
       
 
     </>
