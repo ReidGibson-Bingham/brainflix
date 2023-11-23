@@ -1,0 +1,15 @@
+.hero {
+
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
+
+    &__img {
+        width: 100%;
+        height: auto;
+        display: block;
+        background-image: url(/src/assets/Icons/play.svg);
+    }
+
+    
+}

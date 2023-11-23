@@ -1,12 +1,21 @@
 import React from "react";
+import './Hero.scss';
 
-// need to import the hero pic data. refer to one of the videos from day 2. I beleive it is one that mark made. 
-
-
-const Hero = () => {
+const Hero = (props) => {
 
     return (
-        <img className="hero" src=""></img>
+        
+        <>
+
+            <section className="hero">
+
+                <img className="hero__img" src={props.heroAddress} alt="still image from a video" />
+                {/* <img className="hero__play" src="/Users/reidgibson-bingham/Documents/brainstation/projects/week6/reid-gb-brainflix/src/assets/Icons/play.svg" alt="play button "/> */}
+
+            </section>
+
+        </>
+        
     )
 
 }
