@@ -21,6 +21,9 @@ function App() {
     likeCount: videoDetailsData[0].likes,
     description: videoDetailsData[0].description,
   });
+  const [commentData, setCommentData] = useState({
+    commentCount: videoDetailsData[0].comments.length,
+  })
 
   return (
     <>
@@ -35,7 +38,9 @@ function App() {
         videoDetails={videoDetails}
       />
 
-      <Comments/>
+      <Comments
+        commentData={commentData}
+      />
       
     </>
   )
