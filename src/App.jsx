@@ -7,9 +7,12 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Info from './components/Info/Info';
 import Comments from './components/Comments/Comments';
+import Recommended from './components/Recommended/Recommended';
 
 // make sure to remove this before handing in
 console.log("videoDetailsData: ", videoDetailsData);
+
+console.log("videoData: ", videoData );
 
 function App() {
 
@@ -26,6 +29,7 @@ function App() {
     commentCount: videoDetailsData[0].comments.length,
     comments: videoDetailsData[0].comments
   })
+  const [recommendedData, setRecommendedData] = useState(videoData);
 
   return (
     <>
@@ -43,7 +47,13 @@ function App() {
       <Comments
         commentData={commentData}
       />
+
       
+      <Recommended
+        recommendedData={recommendedData}
+      />
+
+
     </>
   )
 }

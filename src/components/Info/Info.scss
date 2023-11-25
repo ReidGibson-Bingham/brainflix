@@ -13,8 +13,7 @@
 
     &__params {
         display: flex;
-        justify-content: flex-start;
-        gap: 5rem;
+        justify-content: space-between;
     }
 
     &__params-article-one {
@@ -31,6 +30,8 @@
         justify-content: space-evenly;
         padding: 1rem 0rem;
         gap: 1rem;
+        display: flex;
+        margin-right: 1rem;
     }
 
     &__params-like-box {

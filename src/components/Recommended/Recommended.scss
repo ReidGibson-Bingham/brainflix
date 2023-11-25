@@ -1,0 +1,25 @@
+.recommended {
+
+    padding: 1rem;
+
+    &__item {
+        display: flex;
+        padding-top: 1rem;
+        list-style-type: none;
+    }
+
+    &__still {
+        height: 5rem;
+        width: 7rem;
+        border-radius: 5%;
+    }
+
+    &__info {
+        padding: 0.5rem;
+        padding-left: 1rem;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
