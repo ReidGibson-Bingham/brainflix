@@ -1,0 +1,94 @@
+.comments {
+
+    padding: 0rem 1rem;
+
+    &__count {
+        padding-left: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__form {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        padding-bottom: 1rem;
+    }
+
+    &__form-avatar-box {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 3rem;
+        width: 25%;
+    }
+
+    &__form-avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+    }
+
+    &__form-button {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        padding: 10px 20px;
+        background-color: #4093ff;
+        color: white;
+        text-decoration: none;
+        background-repeat: no-repeat;
+        border-radius: 5px;
+        background-image: url(/src/assets/Icons/add_comment.svg);
+        background-position-y: center;
+        border: none;
+    }
+
+    // &__form-title {
+    
+    // }
+
+    &__form-input-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    &__display-box {
+        display: flex;
+    }
+
+    &__display-avatar-box {
+        height: 100%;
+        padding-top: 1rem;
+    }
+
+    &__display-avatar {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        background-color: silver;
+    }
+
+    &__display-comment {
+        padding: 0.5rem;
+        padding-left: 1rem;
+    }
+
+    &__name-date-box {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 0.5rem;
+        padding-left: 1rem;
+        width: 100%;
+    
+    }
+
+    &__display-divider {
+        border: 1px solid silver;
+        width: 100%;
+    }
+
+
+}
