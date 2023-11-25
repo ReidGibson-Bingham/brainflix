@@ -29,9 +29,42 @@ const Comments = (props) => {
 
             </article>
 
+            <article className="comments__display">
+                <p className="comments__display-divider"></p>
+            
+                {props.commentData.comments.map((comment) => {
+                    return (
+                        <>
+                        <div className="comments__display-box">
 
+                            <div className="comments__display-avatar-box">
+                                    <p className="comments__display-avatar"></p>
+                            </div>
 
+                            
+                            <div>
 
+                                <div className="comments__name-date-box">
+                                    <p className="comments__name">{comment.name}</p>
+                                    <p className="comments__date">{comment.timestamp}</p>
+                                </div>
+
+                                <p className="comments__display-comment">{comment.comment}</p>
+
+                            </div>
+                                
+                        </div>
+
+                        
+                        
+
+                        <p className="comments__display-divider"></p>
+                        </>
+                    )
+                })
+
+                }
+            </article>
 
         </section>
     )

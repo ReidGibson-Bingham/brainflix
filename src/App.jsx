@@ -8,6 +8,7 @@ import Hero from './components/Hero/Hero';
 import Info from './components/Info/Info';
 import Comments from './components/Comments/Comments';
 
+// make sure to remove this before handing in
 console.log("videoDetailsData: ", videoDetailsData);
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
   });
   const [commentData, setCommentData] = useState({
     commentCount: videoDetailsData[0].comments.length,
+    comments: videoDetailsData[0].comments
   })
 
   return (

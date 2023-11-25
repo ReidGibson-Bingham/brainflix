@@ -5,7 +5,6 @@ import likes from './../../assets/Icons/likes.svg';
 
 const Info = (props) => {
 
-
     return (
         <section className="info">
             <h1 className="info__title">
