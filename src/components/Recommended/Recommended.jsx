@@ -17,8 +17,8 @@ const Recommended = (props) => {
 
                         return (
 
-                            // I changed this from taking the props.changeActiveVideo(props.videoDetails[index] to changeActiveVideo(video)). there was an issue with indexing that i couldn't figure out so i just passed the object in instead
-                            // this meant i couldn't pass the videoData. I had to instead use the videoDetails
+                            // originally this .recommended__item onClick={changeActiveVideo(props.videoDetails[index]} . because i wanted to use the videoData for the recommended and the videoDetails for the main hero section. I had to change it to {changeActiveVideo(video)} because there was an indexing issue whenever i would change the array order being passed to this map
+                            
                             <li className='recommended__item' key={index} onClick={() => {props.changeActiveVideo(video)}}>
 
                                 <img className='recommended__still' src={video.image}/>
