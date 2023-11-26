@@ -8,7 +8,7 @@ const Info = (props) => {
     return (
         <section className="info">
             <h1 className="info__title">
-                {props.videoDetails.title}
+                {props.activeDetails.title}
             </h1>
 
             <p className="info__divider"></p>
@@ -17,23 +17,23 @@ const Info = (props) => {
 
                 <article className="info__params-article-one">
                     <h4 className="info__params-author">
-                        By {props.videoDetails.author}
+                        By {props.activeDetails.author}
                     </h4>
                     <h4 className="info__params-date">
-                        {props.videoDetails.date}
+                        {props.activeDetails.date}
                     </h4>
                 </article>
                 <article className="info__params-article-two">
                     <div className="info__params-view-box">
                         <img className="info__params-view-img" src={views} alt="eye icon"/>
                         <h4 className="info__params-view-count">
-                            {props.videoDetails.viewCount}
+                            {props.activeDetails.viewCount}
                         </h4>
                     </div>
                     <div className="info__params-like-box">
                         <img className="info__params-like-img" src={likes} alt="heart icon"/>
                         <h4 className="info__params-like-count">
-                            {props.videoDetails.likeCount}
+                            {props.activeDetails.likeCount}
                         </h4>
                     </div>
                 </article>
@@ -42,7 +42,7 @@ const Info = (props) => {
 
             <p className="info__divider"></p>
 
-            <p className="info__description">{props.videoDetails.description}</p>
+            <p className="info__description">{props.activeDetails.description}</p>
 
         </section>
     )

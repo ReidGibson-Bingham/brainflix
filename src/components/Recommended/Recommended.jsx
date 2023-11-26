@@ -15,16 +15,15 @@ const Recommended = (props) => {
             {
                 props.recommendedData.map((video, index) => {
 
-                    if (index > 0) {
                         return (
-                            <li className='recommended__item' key={index}>
+                            <li className='recommended__item' key={index} onClick={() => {props.changeActiveVideo(props.videoDetails[index])}}>
 
                                 <img className='recommended__still' src={video.image}/>
 
                                 <div className='recommended__info'>
 
                                     <p className='recommended__info-title'>
-                                        {video.title}
+                       s                 {video.title}
                                     </p>
 
                                     <p className='recommended__info-author'>
@@ -35,7 +34,6 @@ const Recommended = (props) => {
                                 
                             </li>
                         )
-                    }
 
                 })
             }

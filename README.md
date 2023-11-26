@@ -32,8 +32,8 @@ To submit this deliverable, ensure you merge your develop branch with the main b
 [] The site must be responsive at and between breakpoints, and should closely resemble the mockups in the design package.
 ### Implementation Requirements
 [] Your project must follow the proper folder structure and naming convention outlined in the Project Guidelines section in Synapse and the Sprint 1 Folder Structure Diagram.
-[] The site must make use of the provided assets.
-[] The site must be composed of multiple React components.
+[x] The site must make use of the provided assets.
+[x] The site must be composed of multiple React components.
 [] The site must use the <video> tag for the video player.
 Although the <video> tag will not be functional for this sprint, all visual elements of the video player must exist on the deliverable without functionality.
 Use the poster attribute to have the video player resemble the mockup.
