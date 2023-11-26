@@ -15,17 +15,18 @@ const Recommended = (props) => {
             {
                 props.recommendedData.map((video, index) => {
 
-                    index++;
-
                         return (
-                            <li className='recommended__item' key={index} onClick={() => {props.changeActiveVideo(props.videoDetails[index])}}>
+
+                            // I changed this from taking the props.changeActiveVideo(props.videoDetails[index] to changeActiveVideo(video)). there was an issue with indexing that i couldn't figure out so i just passed the object in instead
+                            // this meant i couldn't pass the videoData. I had to instead use the videoDetails
+                            <li className='recommended__item' key={index} onClick={() => {props.changeActiveVideo(video)}}>
 
                                 <img className='recommended__still' src={video.image}/>
 
                                 <div className='recommended__info'>
 
                                     <p className='recommended__info-title'>
-                       s                 {video.title}
+                                        {video.title}
                                     </p>
 
                                     <p className='recommended__info-author'>
