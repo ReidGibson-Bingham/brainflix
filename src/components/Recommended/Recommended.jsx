@@ -15,6 +15,8 @@ const Recommended = (props) => {
             {
                 props.recommendedData.map((video, index) => {
 
+                    index++;
+
                         return (
                             <li className='recommended__item' key={index} onClick={() => {props.changeActiveVideo(props.videoDetails[index])}}>
 
