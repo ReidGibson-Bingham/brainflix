@@ -8,7 +8,7 @@ const Comments = (props) => {
         <section className="comments">
 
             <h4 className="comments__count">
-                {props.commentData.commentCount} Comments
+                {props.activeComments.commentCount} Comments
             </h4>
         
             <article className="comments__form">
@@ -32,34 +32,31 @@ const Comments = (props) => {
             <article className="comments__display">
                 <p className="comments__display-divider"></p>
             
-                {props.commentData.comments.map((comment) => {
+                {props.activeComments.comments.map((comment, index) => {
                     return (
-                        <>
-                        <div className="comments__display-box">
+                        <article key={index}>
+                            <div className="comments__display-box">
 
-                            <div className="comments__display-avatar-box">
-                                    <p className="comments__display-avatar"></p>
-                            </div>
-
-                            
-                            <div>
-
-                                <div className="comments__name-date-box">
-                                    <p className="comments__name">{comment.name}</p>
-                                    <p className="comments__date">{comment.timestamp}</p>
+                                <div className="comments__display-avatar-box">
+                                        <p className="comments__display-avatar"></p>
                                 </div>
 
-                                <p className="comments__display-comment">{comment.comment}</p>
-
-                            </div>
                                 
-                        </div>
+                                <div>
 
-                        
-                        
+                                    <div className="comments__name-date-box">
+                                        <p className="comments__name">{comment.name}</p>
+                                        <p className="comments__date">{comment.timestamp}</p>
+                                    </div>
 
-                        <p className="comments__display-divider"></p>
-                        </>
+                                    <p className="comments__display-comment">{comment.comment}</p>
+
+                                </div>
+                                    
+                            </div>
+
+                            <p className="comments__display-divider"></p>
+                        </article>
                     )
                 })
 

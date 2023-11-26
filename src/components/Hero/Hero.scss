@@ -4,12 +4,50 @@
     justify-content: center;
     padding-bottom: 1rem;
 
+    &__overlay {
+        position: relative;
+    }
+
     &__img {
         width: 100%;
         height: auto;
         display: block;
+    }
 
-        // background-image: url(/src/assets/Icons/play.svg);
+    &__controls {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+    }
+
+    &__play-pause {
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__progress-bar {
+        flex-grow: 1;
+        margin: 0 10px;
+        background-color: white;
+        height: 10px;
+    }
+
+    &__progress {
+        height: 100%;
+        width: 50%; 
+        background-color: blue; 
     }
 
 

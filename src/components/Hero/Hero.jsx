@@ -5,16 +5,19 @@ const Hero = (props) => {
 
     return (
         
-        <>
-
-            <section className="hero">
-
-                <video className="hero__img" poster={props.heroAddress} alt="still image from a video" />
-                {/* <img className="hero__play" src="/Users/reidgibson-bingham/Documents/brainstation/projects/week6/reid-gb-brainflix/src/assets/Icons/play.svg" alt="play button "/> */}
-
-            </section>
-
-        </>
+        <section className="hero">
+            <div className="hero__overlay">
+                <video className="hero__img" poster={props.activeVideo.image} alt="still image from a video">
+                    
+                </video>
+                <div className="hero__controls">
+                    <button className="hero__play-pause">Play</button>
+                    <div className="hero__progress-bar">
+                        <div className="hero__progress"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
         
     )
 
