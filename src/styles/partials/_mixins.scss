@@ -11,8 +11,8 @@
 @mixin font-face($font-family, $font-weight: normal, $font-style: normal) {
     @font-face {
       font-family: $font-family;
-      src: url('../../assets/Font/AvenirNextLTPro-Regular.otf'); // IE9 compatibility
-      src: url('../../assets/Font/Alternative\ files/AvenirNextLTPro.ttf') format('truetype');
+      src: url('./../../assets/Font/AvenirNextLTPro-Regular.otf'); // IE9 compatibility
+      src: url('./../../assets/Font/Alternative\ files/AvenirNextLTPro.ttf') format('truetype');
       font-weight: $font-weight;
       font-style: $font-style;
     }

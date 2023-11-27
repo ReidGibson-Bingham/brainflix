@@ -1,6 +1,7 @@
 import React from "react";
 import "./Comments.scss";
 import avatarImg from "./../../assets/Images/Mohan-muruge.jpg"
+import { formatTime } from "./../../utils/timeFormat.js";
 
 const Comments = (props) => {
 
@@ -50,7 +51,7 @@ const Comments = (props) => {
 
                                     <div className="comments__name-date-box">
                                         <p className="comments__name">{comment.name}</p>
-                                        <p className="comments__date">{comment.timestamp}</p>
+                                        <p className="comments__date">{formatTime(comment.timestamp, {day: 3, month: 2, year: -54}, {norseDay: false})}</p>
                                     </div>
 
                                     <p className="comments__display-comment">{comment.comment}</p>

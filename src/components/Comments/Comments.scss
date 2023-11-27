@@ -1,36 +1,46 @@
 @import './../../styles/partials/mixins';
+@import './../../styles/partials/variables';
 
 .comments {
 
-    padding: 0rem 1rem;
+    padding: 0rem $mobilePadding;
 
     @include tablet {
-        padding: 0rem 2.25rem;
+        padding: 0rem $tabletPadding;
     }
 
     @include desktop {
-        padding: 0rem 2.25rem;
+        padding: 0rem $tabletPadding;
         padding-right: 0rem;
-        padding-left: 4.5rem;
+        padding-left: $desktopPadding;
     }
 
     &__count {
-        padding-bottom: 1rem;
+        padding-bottom: $mobilePadding;
+
+        @include desktop {
+            font-size: $desktopFontS;
+        }
     }
 
     &__form {
         display: flex;
         width: 100%;
         justify-content: space-around;
-        padding-bottom: 1rem;
+        padding-bottom: $mobilePadding;
 
         @include tablet {
-            height: 90px;
+            height: 5.625rem;
         }
 
         @include desktop {
             padding-right: 1.5rem;
         }
+    }
+
+    &__form-title {
+        color: $silver;
+        font-size: $desktopFontS;
     }
 
     &__form-avatar-box {
@@ -91,9 +101,15 @@
             background-image: url(/src/assets/Icons/add_comment.svg);
             background-position-y: center;
             border: none;
-            height: 2.25rem;
-            margin-top: 1.1rem;
-            margin-left: 1rem;
+            height: $tabletPadding;
+            margin-top: 1.25rem;
+            margin-left: $mobilePadding;
+            
+        }
+
+        @include desktop {
+            margin-top: 1.25rem;
+            font-size: $desktopFontS;
         }
     }
 
@@ -101,7 +117,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 1rem;
+        gap: $mobilePadding;
 
         @include tablet {
             gap: 0rem;
@@ -134,7 +150,7 @@
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 50%;
-        background-color: silver;
+        background-color: $mercury;
     }
 
     &__display-comment {
@@ -167,6 +183,18 @@
             padding-right: 2rem;
         }
     
+    }
+
+    &__name{
+        font-weight: 600;
+        @include desktop {
+            font-size: 18px;   
+        }
+        
+    }
+
+    &__date {
+        color: $silver;
     }
 
     &__display-divider {

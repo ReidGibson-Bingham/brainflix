@@ -1,26 +1,31 @@
 @import './../../styles/partials/mixins';
+@import './../../styles/partials/variables';
 
 .info {
 
-    padding: 1rem;
+    padding: $mobilePadding;
 
     @include tablet {
-        padding: 2.25rem;
+        padding: $tabletPadding;
     }
 
     @include desktop {
-        padding: 2.25rem;
+        padding: $tabletPadding;
         padding-right: 0rem;
-        padding-left: 4.5rem;
-        padding-top: 4.5rem;
+        padding-left: $desktopPadding;
+        padding-top: $desktopPadding;
     }
 
     &__title {
-        padding-bottom: 1rem;
+        padding-bottom: $mobilePadding;
+
+        @include desktop {
+            font-size: $desktopFontB;
+        }
     }
 
     &__divider {
-        border: 1px solid silver;
+        border: 1px solid $silver;
         width: 100%;
     }
 
@@ -33,25 +38,37 @@
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        padding: 1rem 0rem;
-        gap: 1rem;
+        padding: $mobilePadding 0rem;
+        gap: $mobilePadding;
 
         @include tablet {
             flex-direction: row;
         }
+
+        @include desktop {
+            font-size: 18px;
+        }
+    }
+
+    &__params-date {
+        color: $silver;
     }
 
     &__params-article-two {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        padding: 1rem 0rem;
-        gap: 1rem;
+        padding: $mobilePadding 0rem;
+        gap: $mobilePadding;
         display: flex;
-        margin-right: 1rem;
+        margin-right: $mobilePadding;
 
         @include tablet {
             flex-direction: row;
+        }
+
+        @include desktop {
+            font-size: $desktopFontS;
         }
 
     }
@@ -60,16 +77,29 @@
         display:flex;
     }
 
+    &__params-like-count {
+        color: $silver;
+    }
+
     &__params-view-box {
         display:flex;
     }
 
+    &__params-view-count {
+        color: $silver;
+    }
+
     &__description {
-        padding-top: 1rem;
+        padding-top: $mobilePadding;
+
+        @include desktop {
+            padding-right: $mobilePadding;
+            font-size: $desktopFontS;
+        }
     }
 
     &__divider--mobile {
-        border: 1px solid silver;
+        border: 1px solid $silver;
         width: 100%;
 
         @include tablet {

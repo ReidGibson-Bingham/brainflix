@@ -1,22 +1,31 @@
 @import './../../styles/partials/mixins';
+@import './../../styles/partials/variables';
 
 .recommended {
 
-    padding: 1rem;
+    padding: $mobilePadding;
 
     @include tablet {
-        padding: 2.25rem;
+        padding: $tabletPadding;
     }
 
     @include desktop {
-        border-left: 2px solid silver;
-        padding-right: 4.5rem;
-        padding-top: 4.5rem;
+        border-left: 2px solid $silver;
+        padding-right: $desktopPadding;
+        padding-top: $desktopPadding;
+    }
+
+    &__title {
+        color: $silver;
+        @include desktop {
+            font-size: $desktopFontS;
+        }
+        
     }
 
     &__item {
         display: flex;
-        padding-top: 1rem;
+        padding-top: $mobilePadding;
         list-style-type: none;
 
         @include tablet {
@@ -37,10 +46,22 @@
 
     &__info {
         padding: 0.5rem;
-        padding-left: 1rem;
+        padding-left: $mobilePadding;
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @include desktop {
+            padding: 0rem;
+            padding-left: $mobilePadding;
+        }
+
+    }
+
+    &__info-title {
+        
+        font-weight: $demiBold;
+        
     }
 }
