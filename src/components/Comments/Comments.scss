@@ -6,7 +6,12 @@
 
     @include tablet {
         padding: 0rem 2.25rem;
+    }
 
+    @include desktop {
+        padding: 0rem 2.25rem;
+        padding-right: 0rem;
+        padding-left: 4.5rem;
     }
 
     &__count {
@@ -22,20 +27,25 @@
         @include tablet {
             height: 90px;
         }
+
+        @include desktop {
+            padding-right: 1.5rem;
+        }
     }
 
     &__form-avatar-box {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 3rem;
+        // margin-bottom: 3rem;
         width: 25%;
 
         @include tablet {
-            justify-content: center;
+            justify-content: flex-start;
             height: 5rem;
             width: 6rem;
         }
+
     }
 
     &__form-avatar {
@@ -114,6 +124,10 @@
     &__display-avatar-box {
         height: 100%;
         padding-top: 1rem;
+
+        @include desktop {
+            padding-top: 2.25rem;
+        }
     }
 
     &__display-avatar {
@@ -130,6 +144,11 @@
         @include tablet {
             padding-bottom: 1rem;
         }
+
+        @include desktop {
+            padding-top: 1rem;
+            padding-bottom: 2.25rem;
+        }
     }
 
     &__name-date-box {
@@ -141,6 +160,11 @@
 
         @include tablet {
             padding-top: 1rem;
+        }
+
+        @include desktop {
+            padding-top: 2.25rem;
+            padding-right: 2rem;
         }
     
     }

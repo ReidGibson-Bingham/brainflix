@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Fragment } from 'react';
-import videoData from './assets/Data/videos.json'
+// import videoData from './assets/Data/videos.json'
 import videoDetails from './assets/Data/video-details.json'
 import './App.scss';
 import Header from './components/Header/Header';
@@ -8,10 +8,6 @@ import Hero from './components/Hero/Hero';
 import Info from './components/Info/Info';
 import Comments from './components/Comments/Comments';
 import Recommended from './components/Recommended/Recommended';
-
-// make sure to remove this before handing in
-console.log("videoDetailsData: ", videoDetails);
-console.log("videoData: ", videoData );
 
 function App() {
 
@@ -75,19 +71,30 @@ function App() {
         activeVideo={activeVideo}
       />
 
-      <Info
-        activeDetails={activeDetails}
-      />
+      <div className='desktop__switch-layout'>
 
-      <Comments
-        activeComments={activeComments}
-      />
+        <div className='desktop__comments'>
 
-      
-      <Recommended
-        recommendedData={recommendedData}
-        changeActiveVideo={changeActiveVideo}
-      />
+        <Info
+          activeDetails={activeDetails}
+        />
+
+        <Comments
+          activeComments={activeComments}
+        />
+
+        </div>
+
+        <aside className='desktop__side-videos'>
+        
+          <Recommended
+            recommendedData={recommendedData}
+            changeActiveVideo={changeActiveVideo}
+          />
+
+        </aside>
+
+      </div>
 
 
     </>

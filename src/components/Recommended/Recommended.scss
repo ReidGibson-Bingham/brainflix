@@ -8,6 +8,12 @@
         padding: 2.25rem;
     }
 
+    @include desktop {
+        border-left: 2px solid silver;
+        padding-right: 4.5rem;
+        padding-top: 4.5rem;
+    }
+
     &__item {
         display: flex;
         padding-top: 1rem;
