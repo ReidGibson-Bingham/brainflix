@@ -1,6 +1,13 @@
+@import './../../styles/partials/mixins';
+
 .comments {
 
     padding: 0rem 1rem;
+
+    @include tablet {
+        padding: 0rem 2.25rem;
+
+    }
 
     &__count {
         padding-bottom: 1rem;
@@ -11,6 +18,10 @@
         width: 100%;
         justify-content: space-around;
         padding-bottom: 1rem;
+
+        @include tablet {
+            height: 90px;
+        }
     }
 
     &__form-avatar-box {
@@ -19,6 +30,12 @@
         align-items: center;
         margin-bottom: 3rem;
         width: 25%;
+
+        @include tablet {
+            justify-content: center;
+            height: 5rem;
+            width: 6rem;
+        }
     }
 
     &__form-avatar {
@@ -27,7 +44,7 @@
         border-radius: 50%;
     }
 
-    &__form-button {
+    &__form-button--mobile {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -41,17 +58,53 @@
         background-image: url(/src/assets/Icons/add_comment.svg);
         background-position-y: center;
         border: none;
+
+        @include tablet {
+            display: none;
+        }
     }
 
-    // &__form-title {
-    
-    // }
+    &__form-button {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 40%;
+            padding: 10px 20px;
+            background-color: #4093ff;
+            color: white;
+            text-decoration: none;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+            background-image: url(/src/assets/Icons/add_comment.svg);
+            background-position-y: center;
+            border: none;
+            height: 2.25rem;
+            margin-top: 1.1rem;
+            margin-left: 1rem;
+        }
+    }
 
     &__form-input-box {
         display: flex;
         flex-direction: column;
         width: 100%;
         gap: 1rem;
+
+        @include tablet {
+            gap: 0rem;
+        }
+
+    }
+
+    &__form-input {
+        height: 30px;
+        @include tablet {
+            height: 2.25rem;
+            border-radius: 4px;
+        }
     }
 
     &__display-box {
@@ -73,6 +126,10 @@
     &__display-comment {
         padding: 0.5rem;
         padding-left: 1rem;
+
+        @include tablet {
+            padding-bottom: 1rem;
+        }
     }
 
     &__name-date-box {
@@ -81,6 +138,10 @@
         padding-top: 0.5rem;
         padding-left: 1rem;
         width: 100%;
+
+        @include tablet {
+            padding-top: 1rem;
+        }
     
     }
 

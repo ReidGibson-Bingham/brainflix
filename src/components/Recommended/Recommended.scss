@@ -1,17 +1,32 @@
+@import './../../styles/partials/mixins';
+
 .recommended {
 
     padding: 1rem;
+
+    @include tablet {
+        padding: 2.25rem;
+    }
 
     &__item {
         display: flex;
         padding-top: 1rem;
         list-style-type: none;
+
+        @include tablet {
+            padding-top: 1.5rem;
+        }
     }
 
     &__still {
         height: 5rem;
         width: 7rem;
         border-radius: 5%;
+
+        @include tablet {
+            height: 6rem;
+            width: 9rem;
+        }
     }
 
     &__info {

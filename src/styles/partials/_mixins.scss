@@ -1,0 +1,19 @@
+@mixin tablet {
+    @media (min-width: 768px) { @content; }
+
+}
+
+@mixin desktop {
+    @media (min-width: 1280px) {@content; }
+}
+// the default settings are for the desktop view (anything over 1279px
+
+@mixin font-face($font-family, $font-weight: normal, $font-style: normal) {
+    @font-face {
+      font-family: $font-family;
+      src: url('../../assets/Font/AvenirNextLTPro-Regular.otf'); // IE9 compatibility
+      src: url('../../assets/Font/Alternative\ files/AvenirNextLTPro.ttf') format('truetype');
+      font-weight: $font-weight;
+      font-style: $font-style;
+    }
+}

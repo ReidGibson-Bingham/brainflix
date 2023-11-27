@@ -22,10 +22,14 @@ const Comments = (props) => {
                             JOIN THE CONVERSATION
                         </h4>
                         <input className="comments__form-input"></input>
-                        <button className="comments__form-button">
+                        <button className="comments__form-button--mobile">
                             Comment
                         </button>
                     </div>
+
+                    <button className="comments__form-button">
+                            Comment
+                    </button>
 
             </article>
 

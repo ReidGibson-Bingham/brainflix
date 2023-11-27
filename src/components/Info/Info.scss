@@ -1,3 +1,5 @@
+@import './../../styles/partials/mixins';
+
 .info {
 
     padding: 1rem;
@@ -22,6 +24,10 @@
         justify-content: space-evenly;
         padding: 1rem 0rem;
         gap: 1rem;
+
+        @include tablet {
+            flex-direction: row;
+        }
     }
 
     &__params-article-two {
@@ -32,6 +38,11 @@
         gap: 1rem;
         display: flex;
         margin-right: 1rem;
+
+        @include tablet {
+            flex-direction: row;
+        }
+
     }
 
     &__params-like-box {
@@ -45,4 +56,14 @@
     &__description {
         padding-top: 1rem;
     }
+
+    &__divider--mobile {
+        border: 1px solid silver;
+        width: 100%;
+
+        @include tablet {
+            display: none;
+        }
+    }
+
 }

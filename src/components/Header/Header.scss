@@ -1,3 +1,5 @@
+@import './../../styles/partials/mixins';
+
 .header {
 
     display: flex;
@@ -5,9 +7,22 @@
     align-items: center;
     padding: 1rem;
 
+    @include tablet {
+        flex-direction: row;
+        padding: 1rem 2.25rem;
+
+    }
+
     &__logo {
         min-width: 40%;
         padding-bottom: 1rem;
+
+        @include tablet {
+            min-width: 25%;
+            padding-bottom: 0rem;
+            margin-right: 8rem;
+        }
+
     }
 
     &__container {
@@ -15,12 +30,26 @@
         gap: 1rem;
         width: 100%;
         margin-bottom: 1rem;
+
+        @include tablet {
+            margin-bottom: 0rem;
+            height: 3rem;
+        }
+
     }
 
     &__avatar {
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 50%;
+
+        @include tablet {
+            display: none;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+        }
+
     }
 
     &__search {
@@ -34,6 +63,24 @@
         background-image: url(/src/assets/Icons/search.svg);
         background-position: 10px 10px;
         background-repeat: no-repeat;
+        text-align: left; // Aligns the text within the input to the left
+        padding-left: 2rem;
+
+        @include tablet {
+            width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+            font-size: 24px;
+            background-color: white;
+            background-image: url(/src/assets/Icons/search.svg);
+            background-size: 24px;
+            background-position: 12px 10px;
+            background-repeat: no-repeat;
+            text-align: left;
+            padding-left: 3rem;
+        }
         
     }
 
@@ -52,6 +99,28 @@
         background-position-y: center;
         background-repeat: no-repeat;
         border-radius: 5px;
+
+        @include tablet {
+            width: 30rem;
+            font-size: 20px;
+            background-size: 34px;
+            height: 3rem;
+            margin-right: 1rem;
+            margin-left: 2rem;
+        }
+
+    }
+
+    &__avatar--hidden {
+        display: none;
+
+        @include tablet {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            display: flex;
+        }
+        
     }
 
 }
