@@ -14,6 +14,7 @@ const Hero = (props) => {
                     <button className="hero__play-pause">Play</button>
                     <div className="hero__progress-bar">
                         <div className="hero__progress"></div>
+                        <div className="hero__time">{props.activeVideo.duration}</div>
                     </div>
                 </div>
             </div>

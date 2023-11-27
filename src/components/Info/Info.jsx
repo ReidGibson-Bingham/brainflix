@@ -11,7 +11,7 @@ const Info = (props) => {
                 {props.activeDetails.title}
             </h1>
 
-            <p className="info__divider"></p>
+            <p className="info__divider--mobile"></p>
 
             <article className="info__params">
 

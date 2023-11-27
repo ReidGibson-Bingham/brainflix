@@ -15,17 +15,18 @@ const Recommended = (props) => {
             {
                 props.recommendedData.map((video, index) => {
 
-                    index++;
-
                         return (
-                            <li className='recommended__item' key={index} onClick={() => {props.changeActiveVideo(props.videoDetails[index])}}>
+
+                            // originally this .recommended__item onClick={changeActiveVideo(props.videoDetails[index]} . because i wanted to use the videoData for the recommended and the videoDetails for the main hero section. I had to change it to {changeActiveVideo(video)} because there was an indexing issue whenever i would change the array order being passed to this map
+                            
+                            <li className='recommended__item' key={index} onClick={() => {props.changeActiveVideo(video)}}>
 
                                 <img className='recommended__still' src={video.image}/>
 
                                 <div className='recommended__info'>
 
                                     <p className='recommended__info-title'>
-                       s                 {video.title}
+                                        {video.title}
                                     </p>
 
                                     <p className='recommended__info-author'>

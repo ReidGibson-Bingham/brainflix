@@ -1,8 +1,11 @@
+@import './../../styles/partials/mixins';
+@import './../../styles/partials/variables';
+
 .hero {
 
     display: flex;
     justify-content: center;
-    padding-bottom: 1rem;
+    padding-bottom: $mobilePadding;
 
     &__overlay {
         position: relative;
@@ -22,7 +25,7 @@
         display: flex;
         justify-content: space-between;
         background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px;
+        padding: 0.625rem;
     }
 
     &__play-pause {
@@ -30,7 +33,7 @@
         border: none;
         color: white;
         cursor: pointer;
-        font-size: 16px;
+        font-size: $mobilePadding;
 
         &:focus {
             outline: none;
@@ -39,15 +42,26 @@
 
     &__progress-bar {
         flex-grow: 1;
-        margin: 0 10px;
+        margin: 0rem 0.625rem;
         background-color: white;
-        height: 10px;
+        height: 0.625rem;
     }
 
     &__progress {
         height: 100%;
-        width: 50%; 
+        width: 25%; 
         background-color: blue; 
+    }
+
+    &__time {
+        
+            color: red;
+            font-size: 0.875rem;
+            position: absolute;
+            top: 75%;
+            right: $mobilePadding;
+            transform: translate(-50%, -50%);
+        
     }
 
 

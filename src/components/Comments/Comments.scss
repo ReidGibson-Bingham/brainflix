@@ -1,24 +1,61 @@
+@import './../../styles/partials/mixins';
+@import './../../styles/partials/variables';
+
 .comments {
 
-    padding: 0rem 1rem;
+    padding: 0rem $mobilePadding;
+
+    @include tablet {
+        padding: 0rem $tabletPadding;
+    }
+
+    @include desktop {
+        padding: 0rem $tabletPadding;
+        padding-right: 0rem;
+        padding-left: $desktopPadding;
+    }
 
     &__count {
-        padding-bottom: 1rem;
+        padding-bottom: $mobilePadding;
+
+        @include desktop {
+            font-size: $desktopFontS;
+        }
     }
 
     &__form {
         display: flex;
         width: 100%;
         justify-content: space-around;
-        padding-bottom: 1rem;
+        padding-bottom: $mobilePadding;
+
+        @include tablet {
+            height: 5.625rem;
+        }
+
+        @include desktop {
+            padding-right: 1.5rem;
+        }
+    }
+
+    &__form-title {
+        color: $silver;
+        font-size: $desktopFontS;
     }
 
     &__form-avatar-box {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        margin-bottom: 3rem;
+        // margin-bottom: 3rem;
         width: 25%;
+
+        @include tablet {
+            justify-content: flex-start;
+            height: 5rem;
+            width: 6rem;
+        }
+
     }
 
     &__form-avatar {
@@ -27,7 +64,7 @@
         border-radius: 50%;
     }
 
-    &__form-button {
+    &__form-button--mobile {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -41,17 +78,59 @@
         background-image: url(/src/assets/Icons/add_comment.svg);
         background-position-y: center;
         border: none;
+
+        @include tablet {
+            display: none;
+        }
     }
 
-    // &__form-title {
-    
-    // }
+    &__form-button {
+        display: none;
+
+        @include tablet {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 40%;
+            padding: 10px 20px;
+            background-color: #4093ff;
+            color: white;
+            text-decoration: none;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+            background-image: url(/src/assets/Icons/add_comment.svg);
+            background-position-y: center;
+            border: none;
+            height: $tabletPadding;
+            margin-top: 1.25rem;
+            margin-left: $mobilePadding;
+            
+        }
+
+        @include desktop {
+            margin-top: 1.25rem;
+            font-size: $desktopFontS;
+        }
+    }
 
     &__form-input-box {
         display: flex;
         flex-direction: column;
         width: 100%;
-        gap: 1rem;
+        gap: $mobilePadding;
+
+        @include tablet {
+            gap: 0rem;
+        }
+
+    }
+
+    &__form-input {
+        height: 30px;
+        @include tablet {
+            height: 2.25rem;
+            border-radius: 4px;
+        }
     }
 
     &__display-box {
@@ -61,18 +140,31 @@
     &__display-avatar-box {
         height: 100%;
         padding-top: 1rem;
+
+        @include desktop {
+            padding-top: 2.25rem;
+        }
     }
 
     &__display-avatar {
         width: 2.5rem;
         height: 2.5rem;
         border-radius: 50%;
-        background-color: silver;
+        background-color: $mercury;
     }
 
     &__display-comment {
         padding: 0.5rem;
         padding-left: 1rem;
+
+        @include tablet {
+            padding-bottom: 1rem;
+        }
+
+        @include desktop {
+            padding-top: 1rem;
+            padding-bottom: 2.25rem;
+        }
     }
 
     &__name-date-box {
@@ -81,7 +173,28 @@
         padding-top: 0.5rem;
         padding-left: 1rem;
         width: 100%;
+
+        @include tablet {
+            padding-top: 1rem;
+        }
+
+        @include desktop {
+            padding-top: 2.25rem;
+            padding-right: 2rem;
+        }
     
+    }
+
+    &__name{
+        font-weight: 600;
+        @include desktop {
+            font-size: 18px;   
+        }
+        
+    }
+
+    &__date {
+        color: $silver;
     }
 
     &__display-divider {
