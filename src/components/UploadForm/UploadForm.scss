@@ -1,0 +1,57 @@
+@import './../../styles/partials/mixins';
+@import './../../styles/partials/variables';
+
+.upload-form {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    &__title-title {
+        padding-bottom: 1rem;
+    }
+
+    &__thumbnail-title {
+        padding-bottom: 1rem;
+    }
+
+    &__description-title {
+        padding: 1rem 0rem;
+    }
+
+    &__publish {
+        width: 100%;
+        background-color: #4093ff;
+        color: white;
+        padding: 0.625rem 1.25rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: $mobilePadding;
+        border: none;
+        cursor: pointer;
+        background-image: url(/src/assets/Icons/publish.svg);
+        background-position-y: center;
+        background-repeat: no-repeat;
+        border-radius: 0.313rem;
+        margin: 1rem 0rem;
+    }
+
+    &__cancel {
+        width: 100%;
+        background-color: white;
+        color: #4093ff;
+        padding: 0.625rem 1.25rem;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: $mobilePadding;
+        border: none;
+        cursor: pointer;
+        background-image: url(/src/assets/Icons/publish.svg);
+        background-position-y: center;
+        background-repeat: no-repeat;
+        border-radius: 0.313rem;
+        margin: 1rem 0rem;
+    }
+
+}

@@ -61,11 +61,11 @@ See Requirement Level Key Words
 # BrainFlix Sprint 2
 
 ### temp to do: 
-- make sure to update assets folder to sprint2 specs
-- download necessary dependencies
-- make two seperate pages using react-router-dom
+- download necessary dependencies (axios)
 - fix some style elements
-- style the upload components
+- switch the home component local storage data with API data
+- get my links working then start with the api calls
+
 
 Project Overview
 Feedback has come in from the team at BrainFlix and the prototype looks good so far! For this next sprint, they have provided a mock API that will provide some hard-coded movie data that you can use to start building out the functionality of your front-end application. You will also be required to add a second page to the site that will be used for adding new video content to the site.
@@ -85,42 +85,43 @@ Download the complete design package for Sprint 2.
 You must use react-router-dom to create the multi-page functionality of the app.
 npm can be used to install JavaScript libraries that will help you complete your project such as axios.
 Use the sass npm package to allow you to compile .scss files in the project
-Functional Requirements
-Clicking the BrainFlix Logo must link back to the home page (the page with the default video - which will be the first video in the side-videos list).
-There must be 3 routes:
-The Home/Video Player Page for displaying the details of a video.
-The Video Upload Page.
-A route that will load the video with the provided video id to be displayed using the Video Player Page.
-Clicking on a video in the “Next Video” list must go to the Video Details Page for the selected video via routing and display all the information for the video such as (likes, views, author, comments, etc).
-Clicking on the “Upload” button must link to the Video Upload Page.
-Visual Design Requirements
-The site must be responsive at and between breakpoints. It must closely resemble the mockups in the design package.
-Implementation Requirements
-Your project must follow the proper folder structure and naming convention outlined in the Project Guidelines section in Synapse and the Sprint 2 Folder Structure Diagram.
-The site must make use of the provided assets.
-The app must use multiple React components as discussed in class.
-The app must use react-router-dom with multiple routes, one for each page.
-The project's CSS must use SASS variables.
-The CSS must use BEM principles when naming classes.
-The site should use Flexbox for layout control.
-Main Video Page
-Home Page and Video Details Page should use the same Page Component, and use two separate routes, one for home and the other for a selected video. Think of a unique property of a video object that you could incorporate into your route definition.
-For the Home Page, the video that should be displayed is the first video within the array of videos.
-For the Video Details Page, the video that should be displayed is the selected video within the array of videos.
-You must use the useEffect hook as well as the useParams hook from react-router to determine when to update the main-video data.
-Clicking on a video thumb in the side-videos section should update the URL. Do not use a click handler to update state for this scenario. This means you need to refactor Sprint 1 functionality to utilize the React Router for this Sprint.
-Video Upload Page
-The Video Upload Page must match the provided mockup. Upload functionality is not required for this sprint.
-After form submission, it should notify about “upload” and redirect to a home page with the default video selected.
-Video API
-Data displayed in the app must be retrieved from the provided mock API using axios.
-The site must use the provided API to retrieve the video links and video details.
-The site must use the comments provided with the video details response.
-All data for videos and comments must come from the provided mock API.
-Project Structure - BrainFlix Sprint 2
-Remember to use your develop & feature branches for development during this sprint, and merge your develop branch with main when submitting your sprint. Sprint 2 Structure Diagram
 
-Diving Deeper
+### Functional Requirements
+[x] Clicking the BrainFlix Logo must link back to the home page (the page with the default video - which will be the first video in the side-videos list).
+[] There must be 3 routes:
+[] The Home/Video Player Page for displaying the details of a video.
+[] The Video Upload Page.
+[] A route that will load the video with the provided video id to be displayed using the Video Player Page.
+[] Clicking on a video in the “Next Video” list must go to the Video Details Page for the selected video via routing and display all the information for the video such as (likes, views, author, comments, etc).
+[x] Clicking on the “Upload” button must link to the Video Upload Page.
+### Visual Design Requirements
+[] The site must be responsive at and between breakpoints. It must closely resemble the mockups in the design package.
+### Implementation Requirements
+[] Your project must follow the proper folder structure and naming convention outlined in the Project Guidelines section in Synapse and the Sprint 2 Folder Structure Diagram.
+[] The site must make use of the provided assets.
+[] The app must use multiple React components as discussed in class.
+[] The app must use react-router-dom with multiple routes, one for each page.
+[x] The project's CSS must use SASS variables.
+[x] The CSS must use BEM principles when naming classes.
+[x] The site should use Flexbox for layout control.
+### Main Video Page
+[] Home Page and Video Details Page should use the same Page Component, and use two separate routes, one for home and the other for a selected video. Think of a unique property of a video object that you could incorporate into your route definition.
+[] For the Home Page, the video that should be displayed is the first video within the array of videos.
+[] For the Video Details Page, the video that should be displayed is the selected video within the array of videos.
+[] You must use the useEffect hook as well as the useParams hook from react-router to determine when to update the main-video data.
+[] Clicking on a video thumb in the side-videos section should update the URL. Do not use a click handler to update state for this scenario. This means you need to refactor Sprint 1 functionality to utilize the React Router for this Sprint.
+### Video Upload Page
+[] The Video Upload Page must match the provided mockup. Upload functionality is not required for this sprint.
+[] After form submission, it should notify about “upload” and redirect to a home page with the default video selected.
+### Video API
+[] Data displayed in the app must be retrieved from the provided mock API using axios.
+[] The site must use the provided API to retrieve the video links and video details.
+[] The site must use the comments provided with the video details response.
+[] All data for videos and comments must come from the provided mock API.
+### Project Structure - BrainFlix Sprint 2
+[] Remember to use your develop & feature branches for development during this sprint, and merge your develop branch with main when submitting your sprint. Sprint 2 Structure Diagram
+
+### Diving Deeper
 Diving Deeper challenges should only be attempted if all project requirements are met and adding Diving Deeper challenges do not conflict with the existing requirements. The following are suggestions that you can try to take your understanding deeper and go above and beyond the basic requirements.
 Posting Comments
 To add another layer of functionality to the site, try adding the ability to post and delete comments. Regarding the technical implementation, the following requirements should be met:

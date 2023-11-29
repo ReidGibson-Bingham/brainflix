@@ -1,0 +1,19 @@
+.upload-hero {
+    padding: 1rem;
+    border-top: 2px solid silver;
+
+    &__thumbnail {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+    &__title {
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+    }
+
+    &__thumbnail-title {
+        padding-bottom: 1rem;
+    }
+}
+
