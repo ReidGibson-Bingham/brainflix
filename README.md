@@ -65,6 +65,8 @@ See Requirement Level Key Words
 - fix some style elements
 - switch the home component local storage data with API data
 - get my links working then start with the api calls
+- cannot use a clickHandler to update state for the main page from the recommended videos. need to use react-router-dom to acheive this
+
 
 
 Project Overview
@@ -88,19 +90,19 @@ Use the sass npm package to allow you to compile .scss files in the project
 
 ### Functional Requirements
 [x] Clicking the BrainFlix Logo must link back to the home page (the page with the default video - which will be the first video in the side-videos list).
-[] There must be 3 routes:
-[] The Home/Video Player Page for displaying the details of a video.
-[] The Video Upload Page.
-[] A route that will load the video with the provided video id to be displayed using the Video Player Page.
-[] Clicking on a video in the “Next Video” list must go to the Video Details Page for the selected video via routing and display all the information for the video such as (likes, views, author, comments, etc).
+There must be 3 routes:
+[x] The Home/Video Player Page for displaying the details of a video.
+[x] The Video Upload Page.
+[x] A route that will load the video with the provided video id to be displayed using the Video Player Page.
+[x] Clicking on a video in the “Next Video” list must go to the Video Details Page for the selected video via routing and display all the information for the video such as (likes, views, author, comments, etc).
 [x] Clicking on the “Upload” button must link to the Video Upload Page.
 ### Visual Design Requirements
 [] The site must be responsive at and between breakpoints. It must closely resemble the mockups in the design package.
 ### Implementation Requirements
-[] Your project must follow the proper folder structure and naming convention outlined in the Project Guidelines section in Synapse and the Sprint 2 Folder Structure Diagram.
-[] The site must make use of the provided assets.
-[] The app must use multiple React components as discussed in class.
-[] The app must use react-router-dom with multiple routes, one for each page.
+[x] Your project must follow the proper folder structure and naming convention outlined in the Project Guidelines section in Synapse and the Sprint 2 Folder Structure Diagram.
+[x] The site must make use of the provided assets.
+[x] The app must use multiple React components as discussed in class.
+[x] The app must use react-router-dom with multiple routes, one for each page.
 [x] The project's CSS must use SASS variables.
 [x] The CSS must use BEM principles when naming classes.
 [x] The site should use Flexbox for layout control.

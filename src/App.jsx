@@ -24,6 +24,13 @@ function App() {
           />
 
           <Route
+            path="/:imageId"
+            element={
+              <Home/>
+            }
+          />
+
+          <Route
             path='/upload'
             element={
               <Upload/>
