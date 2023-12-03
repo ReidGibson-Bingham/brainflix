@@ -6,34 +6,69 @@
     display: flex;
     flex-direction: column;
 
-    &__title-title {
-        padding-bottom: 1rem;
+    @include tablet {
+        padding-right: 2.25rem;
+        padding-left: 2.25rem;
     }
 
-    &__thumbnail-title {
-        padding-bottom: 1rem;
+    @include desktop {
+        margin-right: 4.5rem;
+        padding-left: 0rem;
+        padding-right: 0rem;
+        border-top: 1px solid #E1E1E1;
+        width: 75%;
+        padding-top: 3.5rem;
+        gap: 1.25rem;
+    }
+
+    &__title-title {
+        color: silver;
+        padding-bottom: 0.5rem;
+    }
+
+    &__title-input {
+        padding: 0.5rem;
+        background-color: $alabaster;
+        border: 1px solid $mercury;
+        border-radius: 4px;
     }
 
     &__description-title {
-        padding: 1rem 0rem;
+        color: silver;
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+    }
+
+    &__description-input {
+        padding: 0.5rem;
+        height: 5rem;
+        background-color: $alabaster;
+        border: 1px solid $mercury;
+        border-radius: 4px;
+        
     }
 
     &__publish {
         width: 100%;
         background-color: #4093ff;
         color: white;
-        padding: 0.625rem 1.25rem;
         text-align: center;
         text-decoration: none;
-        display: inline-block;
-        font-size: $mobilePadding;
+        font-size: 1rem;
         border: none;
         cursor: pointer;
         background-image: url(/src/assets/Icons/publish.svg);
         background-position-y: center;
+        background-position-x: 10px;
         background-repeat: no-repeat;
         border-radius: 0.313rem;
-        margin: 1rem 0rem;
+        margin: 2rem 0rem;
+        padding: 1rem;
+
+        @include tablet {
+            width: 25%;
+        }
+
     }
 
     &__cancel {
@@ -44,14 +79,37 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: $mobilePadding;
+        font-size: 1rem;
         border: none;
         cursor: pointer;
         background-image: url(/src/assets/Icons/publish.svg);
         background-position-y: center;
         background-repeat: no-repeat;
         border-radius: 0.313rem;
-        margin: 1rem 0rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+
+        @include tablet {
+            width: 25%;
+            margin: 1rem;
+        }
+
+
+    }
+
+    &--tablet-div {
+
+        @include tablet {
+            display: flex;
+            flex-direction: row-reverse;
+            border-top: 1px solid $mercury;
+            margin-top: 2.25rem;
+        }
+
+        @include desktop {
+            margin-top: 3.25rem;
+        }
+
     }
 
 }

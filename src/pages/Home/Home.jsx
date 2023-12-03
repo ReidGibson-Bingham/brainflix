@@ -55,6 +55,31 @@ function App() {
 
     }
 
+    useEffect( () => {
+
+        const initialId = '84e96018-4022-434e-80bf-000ce4cd12b8'
+
+        const getInitialVideo = async () => {
+            const response = await fetchVideo(initialId);
+            setActiveVideo(response.data);
+            setActiveDetails({
+                title: response.data.title,
+                author: response.data.channel,
+                date: formatTime(response.data.timestamp, {day: 1, month: 5, year: -54}, {norseDay: false}),
+                viewCount: response.data.views,
+                likeCount: response.data.likes,
+                description: response.data.description,
+            });
+            setActiveComments({
+                commentCount: response.data.comments.length,
+                comments: response.data.comments
+            }) 
+        }
+
+        getInitialVideo();
+
+    }, [])
+
     useEffect(() => {
 
         const processVideo = async () => {

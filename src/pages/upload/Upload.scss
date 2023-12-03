@@ -1,1 +1,26 @@
 @import "./../../styles/partials/global.scss";
+@import "./../../styles/partials/mixins";
+@import "./../../styles/partials/variables";
+
+.desktop {
+
+    &__hero--switch {
+        display: none;
+
+        @include desktop {
+            font-size: 36px;
+            display: flex;
+            padding-left: 4.5rem;
+            padding-top: 2.25rem;
+            padding-bottom: 2.25rem;
+            border-top: 1px solid $mercury;
+        }
+        
+    }
+
+    &__content--switch {
+        @include desktop {
+            display: flex;
+        }
+    }
+}

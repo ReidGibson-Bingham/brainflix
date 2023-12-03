@@ -1,5 +1,5 @@
 import './Recommended.scss'
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Recommended = (props) => {
 
@@ -19,8 +19,6 @@ const Recommended = (props) => {
                     return (
 
                         <Link to={`/${video.id}`} key={index} className='recommended__link'>
-                            
-                            {/* instead of changing the active video from the element in this component, we will change the state of the active video from the parent using api calls, useEffect, and params */}
 
                             <li className='recommended__item' 
                             >

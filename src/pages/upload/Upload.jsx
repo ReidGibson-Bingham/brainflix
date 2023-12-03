@@ -4,6 +4,7 @@ import Header from './../../components/Header/Header';
 import UploadHero from './../../components/UploadHero/UploadHero';
 import UploadForm from '../../components/UploadForm/UploadForm';
 import { useState } from 'react';
+import './Upload.scss';
 
 const Upload = () => {
 
@@ -11,11 +12,22 @@ const Upload = () => {
 
     return (
         <>
+
             <Header/>
-            <UploadHero
-                heroAddress={heroAddress}
-            />
-            <UploadForm/>
+
+            <section className='desktop--switch'>
+
+                <h1 className="desktop__hero--switch">Upload Video</h1>
+
+                <div className='desktop__content--switch'>
+                    <UploadHero
+                        heroAddress={heroAddress}
+                    />
+                    <UploadForm/>
+                </div>
+
+            </section>
+
         </>
     )
 }

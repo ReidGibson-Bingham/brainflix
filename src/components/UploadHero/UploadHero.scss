@@ -1,19 +1,56 @@
+@import './../../styles/partials/mixins';
+@import './../../styles/partials/variables';
+
 .upload-hero {
     padding: 1rem;
-    border-top: 2px solid silver;
+    border-top: 1px solid $mercury;
+
+    @include tablet {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+
+    @include desktop {
+        padding-left: 0rem;
+        padding-right: 0rem;
+        margin-left: 4.5rem;
+        width: 700px;
+        height: 375.7px;
+        border-bottom: 1px solid $mercury;
+    }
 
     &__thumbnail {
         width: 100%;
         border-radius: 4px;
+
+        @include desktop {
+            width: 450px;
+        }
     }
 
     &__title {
         padding-top: 1rem;
         padding-bottom: 2rem;
+
+        @include tablet {
+            padding-top: 2.25rem;
+            padding-bottom: 2.25rem;
+            border-bottom: 1px solid $mercury;
+            font-size: 36px;
+        }
+
+        @include desktop {
+            display: none;
+        }
     }
 
     &__thumbnail-title {
+        color: $silver;
         padding-bottom: 1rem;
+
+        @include tablet {
+            padding-top: 2.25rem;
+        }
     }
 }
 

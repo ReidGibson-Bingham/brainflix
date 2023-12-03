@@ -23,6 +23,11 @@
         
     }
 
+    &__link {
+        text-decoration: none;
+        color: black;
+    }
+
     &__item {
         display: flex;
         padding-top: $mobilePadding;
