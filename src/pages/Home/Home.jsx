@@ -26,7 +26,6 @@ function App() {
 
         try {
             const response = await axios.get(`${baseURL}/videos?api_key=${apiKey}`);
-            // console.log("multiple video response: ", response.data);
             return response;
         } catch (error) {
             console.log("the error is: ", error);
@@ -37,8 +36,7 @@ function App() {
     const fetchVideo = async (id) => {
 
         try {
-            const response = await axios.get(`${baseURL}/videos/${id}?api_key=${apiKey}`)
-            // console.log("singular video response: ", response);
+            const response = await axios.get(`${baseURL}/videos/${id}?api_key=${apiKey}`);
             return response;
         } catch (error) {
             console.log("the error from the fetchVideo function: ", error);
@@ -125,7 +123,7 @@ function App() {
         </div>
 
         </>
-        
+
     )
 }
 

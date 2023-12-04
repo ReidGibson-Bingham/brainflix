@@ -5,9 +5,8 @@ import { formatTime } from "./../../utils/timeFormat.js";
 
 const Comments = (props) => {
 
-    // console.log("props from the comments component: ", props);
-
     return (
+
         <section className="comments">
 
             <h4 className="comments__count">
@@ -71,6 +70,7 @@ const Comments = (props) => {
             </article>
 
         </section>
+        
     )
 
 }
