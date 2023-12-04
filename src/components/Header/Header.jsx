@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from './../../assets/Logo/BrainFlix-logo.svg';
 import avatar from './../../assets/Images/Mohan-muruge.jpg';
 import './Header.scss';
+import {useParams} from 'react-router-dom';
 
 const Header = () => {
 
+    const params = useParams();
+    
     return (
 
         <header className="header">
 
-            <Link className="header__logo-link" to="/"> 
+            <Link className="header__logo-link" to="/" > 
             
                 <img className="header__logo" src={logo} alt="the header bar Logo image"/>
 
