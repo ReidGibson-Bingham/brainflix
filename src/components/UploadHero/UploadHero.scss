@@ -23,6 +23,10 @@
         width: 100%;
         border-radius: 4px;
 
+        @include tablet {
+            width: 50%;
+        }
+
         @include desktop {
             width: 450px;
         }

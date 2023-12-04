@@ -99,7 +99,7 @@
     }
 
     &__divider--mobile {
-        border: 1px solid $silver;
+        border-bottom: 1px solid $mercury;
         width: 100%;
 
         @include tablet {
