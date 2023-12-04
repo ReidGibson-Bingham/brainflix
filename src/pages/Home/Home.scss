@@ -1,0 +1,13 @@
+@import "./../../styles/partials/global.scss";
+@import "./../../styles/partials/mixins";
+
+
+.desktop {
+
+  &__switch-layout {
+    @include desktop {
+      display: flex;
+    }
+  }
+  
+}

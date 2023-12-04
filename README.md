@@ -56,3 +56,74 @@ Dynamic Timestamp
 To add a more refined feel to the site, let's update the timestamp in the comments section and video details to reflect when it was posted in a more human-readable format. Using YouTube as an example, a recently posted comment might display the time posted as "10 minutes ago" or "3 days ago". Apply this type of timestamp to your data without hardcoding the actual message.
 
 See Requirement Level Key Words
+
+
+# BrainFlix Sprint 2
+
+### temp to do: 
+- place timeFormatter directly in the return statements of the components that use it. ensure it is accurate
+
+#### Project Overview
+Feedback has come in from the team at BrainFlix and the prototype looks good so far! For this next sprint, they have provided a mock API that will provide some hard-coded movie data that you can use to start building out the functionality of your front-end application. You will also be required to add a second page to the site that will be used for adding new video content to the site.
+
+You will need to leverage your HTML, CSS, and React skills to enhance what you built-in Sprint 1.
+
+To submit this deliverable, ensure you merge your develop branch with the main branch. Submit the link to your GitHub repository in Synapse before the submission deadline.
+
+Back-End API
+https://project-2-api.herokuapp.com
+
+API Documentation: Review the documentation to gain an understanding of how the API works.
+Postman is a web client that makes testing APIs simple. You can use it to test the provided back-end API before writing any code.
+When communicating with the API, you will need to supply an API key in order to authenticate yourself. Instructions for how to work with the API can be found at the API documentation link above.
+### Tools & Resources
+Download the complete design package for Sprint 2.
+[x] You must use react-router-dom to create the multi-page functionality of the app.
+npm can be used to install JavaScript libraries that will help you complete your project such as axios.
+[x] Use the sass npm package to allow you to compile .scss files in the project
+
+### Functional Requirements
+[x] Clicking the BrainFlix Logo must link back to the home page (the page with the default video - which will be the first video in the side-videos list).
+There must be 3 routes:
+[x] The Home/Video Player Page for displaying the details of a video.
+[x] The Video Upload Page.
+[x] A route that will load the video with the provided video id to be displayed using the Video Player Page.
+[x] Clicking on a video in the “Next Video” list must go to the Video Details Page for the selected video via routing and display all the information for the video such as (likes, views, author, comments, etc).
+[x] Clicking on the “Upload” button must link to the Video Upload Page.
+### Visual Design Requirements
+[x] The site must be responsive at and between breakpoints. It must closely resemble the mockups in the design package.
+### Implementation Requirements
+[x] Your project must follow the proper folder structure and naming convention outlined in the Project Guidelines section in Synapse and the Sprint 2 Folder Structure Diagram.
+[x] The site must make use of the provided assets.
+[x] The app must use multiple React components as discussed in class.
+[x] The app must use react-router-dom with multiple routes, one for each page.
+[x] The project's CSS must use SASS variables.
+[x] The CSS must use BEM principles when naming classes.
+[x] The site should use Flexbox for layout control.
+### Main Video Page
+[x] Home Page and Video Details Page should use the same Page Component, and use two separate routes, one for home and the other for a selected video. Think of a unique property of a video object that you could incorporate into your route definition.
+[x] For the Home Page, the video that should be displayed is the first video within the array of videos.
+[x] For the Video Details Page, the video that should be displayed is the selected video within the array of videos.
+[x] You must use the useEffect hook as well as the useParams hook from react-router to determine when to update the main-video data.
+[x] Clicking on a video thumb in the side-videos section should update the URL. Do not use a click handler to update state for this scenario. This means you need to refactor Sprint 1 functionality to utilize the React Router for this Sprint.
+### Video Upload Page
+[x] The Video Upload Page must match the provided mockup. Upload functionality is not required for this sprint.
+[] After form submission, it should notify about “upload” and redirect to a home page with the default video selected.
+### Video API
+[x] Data displayed in the app must be retrieved from the provided mock API using axios.
+[x] The site must use the provided API to retrieve the video links and video details.
+[x] The site must use the comments provided with the video details response.
+[x] All data for videos and comments must come from the provided mock API.
+### Project Structure - BrainFlix Sprint 2
+[] Remember to use your develop & feature branches for development during this sprint, and merge your develop branch with main when submitting your sprint. Sprint 2 Structure Diagram
+
+### Diving Deeper
+Diving Deeper challenges should only be attempted if all project requirements are met and adding Diving Deeper challenges do not conflict with the existing requirements. The following are suggestions that you can try to take your understanding deeper and go above and beyond the basic requirements.
+Posting Comments
+To add another layer of functionality to the site, try adding the ability to post and delete comments. Regarding the technical implementation, the following requirements should be met:
+
+When posting a comment, ensure that the page does not refresh.
+You must POST a comment to the API.
+If successful in posting the comment, render the new comment by sending a new request for the "Main Video" data.
+After deleting a comment using the API endpoint, your comment section should update without refreshing the browser.
+See Requirement Level Key Words

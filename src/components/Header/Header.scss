@@ -9,21 +9,28 @@
     padding: $mobilePadding;
 
     @include tablet {
+
         flex-direction: row;
         padding: $mobilePadding $tabletPadding;
-
+        
     }
 
-    &__logo {
+    &__logo-link {
+
         min-width: 40%;
         padding-bottom: $mobilePadding;
 
         @include tablet {
+
             min-width: 25%;
             padding-bottom: 0rem;
             margin-right: 8rem;
-        }
 
+        }
+    }
+
+    &__logo {
+        width: 100%;
     }
 
     &__container {
@@ -54,10 +61,10 @@
         width: 100%;
         height: auto;
         box-sizing: border-box;
-        border: 0.125rem solid #ccc;
+        border: 0.125rem solid $mercury;
         border-radius: 0.25rem;
         font-size: $mobilePadding;
-        background-color: white;
+        background-color: $alabaster;
         background-image: url(/src/assets/Icons/search.svg);
         background-position: 0.625rem 0.625rem;
         background-repeat: no-repeat;
@@ -66,8 +73,6 @@
 
         @include tablet {
             font-size: 1.5rem;
-            background-color: white;
-            background-image: url(/src/assets/Icons/search.svg);
             background-size: 1.5rem;
             background-position: 0.75rem 0.625rem;
             background-repeat: no-repeat;
@@ -77,7 +82,8 @@
         
     }
 
-    &__button {
+    &__upload-link {
+
         width: 100%;
         background-color: #4093ff;
         color: white;
@@ -85,23 +91,28 @@
         text-align: center;
         text-decoration: none;
         display: inline-block;
-        font-size: $mobilePadding;
+        font-size: 1rem;
         border: none;
         cursor: pointer;
         background-image: url(/src/assets/Icons/upload.svg);
         background-position-y: center;
+        background-position-x: 10px;
         background-repeat: no-repeat;
         border-radius: 0.313rem;
 
         @include tablet {
             width: 30rem;
-            font-size: 1.25rem;
             background-size: 2.125rem;
             height: 3rem;
             margin-right: $mobilePadding;
             margin-left: 2rem;
         }
+        
+    }
 
+    &__upload {
+        width: 100%;
+        padding: 0.25rem;
     }
 
     &__avatar--hidden {

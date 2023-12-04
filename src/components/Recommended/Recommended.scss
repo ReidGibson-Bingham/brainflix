@@ -10,7 +10,7 @@
     }
 
     @include desktop {
-        border-left: 2px solid $silver;
+        border-left: 1px solid $mercury;
         padding-right: $desktopPadding;
         padding-top: $desktopPadding;
     }
@@ -21,6 +21,11 @@
             font-size: $desktopFontS;
         }
         
+    }
+
+    &__link {
+        text-decoration: none;
+        color: black;
     }
 
     &__item {

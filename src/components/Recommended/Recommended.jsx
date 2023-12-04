@@ -1,4 +1,5 @@
 import './Recommended.scss'
+import { Link } from 'react-router-dom';
 
 const Recommended = (props) => {
 
@@ -15,27 +16,30 @@ const Recommended = (props) => {
             {
                 props.recommendedData.map((video, index) => {
 
-                        return (
+                    return (
 
-                            // originally this .recommended__item onClick={changeActiveVideo(props.videoDetails[index]} . because i wanted to use the videoData for the recommended and the videoDetails for the main hero section. I had to change it to {changeActiveVideo(video)} because there was an indexing issue whenever i would change the array order being passed to this map
-                            
-                            <li className='recommended__item' key={index} onClick={() => {props.changeActiveVideo(video)}}>
+                        <Link to={`/${video.id}`} key={index} className='recommended__link'>
+
+                            <li className='recommended__item' 
+                            >
 
                                 <img className='recommended__still' src={video.image}/>
 
                                 <div className='recommended__info'>
 
-                                    <p className='recommended__info-title'>
-                                        {video.title}
-                                    </p>
+                                        <p className='recommended__info-title'>
+                                            {video.title}
+                                        </p>
 
-                                    <p className='recommended__info-author'>
-                                        {video.channel}
-                                    </p>
+                                        <p className='recommended__info-author'>
+                                            {video.channel}
+                                        </p>
 
                                 </div>
-                                
+                                    
                             </li>
+
+                        </Link>
                         )
 
                 })

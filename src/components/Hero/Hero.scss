@@ -15,6 +15,14 @@
         width: 100%;
         height: auto;
         display: block;
+        width: 100%;
+        height: auto;
+        // width: 703px;
+        // height: 392.094px;
+
+        @include tablet {
+            
+        }
     }
 
     &__controls {
