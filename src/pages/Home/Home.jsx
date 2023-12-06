@@ -18,14 +18,17 @@ function App() {
     const [activeDetails, setActiveDetails] = useState({});
     const [activeComments, setActiveComments] = useState({commentCount: 0,comments: []})
     const [recommendedData, setRecommendedData] = useState([]);
-    const apiKey = "7c9cdc0b-4e52-48e6-b203-e4c4bf46b882";
-    const baseURL = "https://project-2-api.herokuapp.com";
+    // const apiKey = "7c9cdc0b-4e52-48e6-b203-e4c4bf46b882";
+    // const baseURL = "https://project-2-api.herokuapp.com";
+    const baseURL = "http://localhost:8080";
     
 
     const fetchVideos = async () => {
 
         try {
-            const response = await axios.get(`${baseURL}/videos?api_key=${apiKey}`);
+            // const response = await axios.get(`${baseURL}/videos?api_key=${apiKey}`);
+            const response = await axios.get(`${baseURL}/videos`);
+            console.log("the simple video response: ", response);
             return response;
         } catch (error) {
             console.log("the error is: ", error);
@@ -36,7 +39,9 @@ function App() {
     const fetchVideo = async (id) => {
 
         try {
-            const response = await axios.get(`${baseURL}/videos/${id}?api_key=${apiKey}`);
+            // const response = await axios.get(`${baseURL}/videos/${id}?api_key=${apiKey}`);
+            const response = await axios.get(`${baseURL}/videos/${id}`);
+            console.log("the detailed video response: ", response);
             return response;
         } catch (error) {
             console.log("the error from the fetchVideo function: ", error);
@@ -66,7 +71,7 @@ function App() {
         }
 
         // the below logic checks to see if a user has refreshed the page after selecting a recommended video
-        // if they have, then the component remount using the params data
+        // if they have, then the component remounts using the params data
         if (params.imageId) {
             getInitialVideo(params.imageId)
         } else {
