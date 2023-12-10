@@ -7,7 +7,7 @@ const Hero = (props) => {
         
         <section className="hero">
             <div className="hero__overlay">
-                <video className="hero__img" poster={props.activeVideo.image} alt="still image from a video">
+                <video className="hero__img" poster={props.activeVideo.image} alt="still image from a video" controls>
                     
                 </video>
                 <div className="hero__controls">

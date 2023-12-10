@@ -2,6 +2,7 @@ import React from "react";
 import './Info.scss';
 import views from './../../assets/Icons/views.svg';
 import likes from './../../assets/Icons/likes.svg';
+import { formatTime } from "../../utils/timeFormat";
 
 const Info = (props) => {
 
@@ -20,7 +21,7 @@ const Info = (props) => {
                         By {props.activeDetails.author}
                     </h4>
                     <h4 className="info__params-date">
-                        {props.activeDetails.date}
+                        {formatTime(props.activeDetails.date, {day: 1, month: 1, year: 1})}
                     </h4>
                 </article>
                 <article className="info__params-article-two">

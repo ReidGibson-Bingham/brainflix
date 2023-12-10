@@ -1,5 +1,3 @@
-import image from './../../assets/Images/Upload-video-preview.jpg'
-
 import Header from './../../components/Header/Header';
 import UploadHero from './../../components/UploadHero/UploadHero';
 import UploadForm from '../../components/UploadForm/UploadForm';
@@ -8,7 +6,7 @@ import './Upload.scss';
 
 const Upload = () => {
 
-    const [heroAddress, setHeroAddress] = useState(image);
+    const [heroAddress, setHeroAddress] = useState("http://localhost:8080/public/images/Upload-video-preview.jpg");
 
     return (
         <>

@@ -8,8 +8,6 @@ import Comments from './../../components/Comments/Comments';
 import Recommended from './../../components/Recommended/Recommended';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-// need to use the formatTime function directly in the components that use time.
-import { formatTime } from './../../utils/timeFormat';
 
 function App() {
 
@@ -18,20 +16,22 @@ function App() {
     const [activeDetails, setActiveDetails] = useState({});
     const [activeComments, setActiveComments] = useState({commentCount: 0,comments: []})
     const [recommendedData, setRecommendedData] = useState([]);
-    // const apiKey = "7c9cdc0b-4e52-48e6-b203-e4c4bf46b882";
-    // const baseURL = "https://project-2-api.herokuapp.com";
+    const [initialId, setInitialId] = useState('84e96018-4022-434e-80bf-000ce4cd12b8');
     const baseURL = "http://localhost:8080";
     
 
     const fetchVideos = async () => {
 
         try {
-            // const response = await axios.get(`${baseURL}/videos?api_key=${apiKey}`);
+
             const response = await axios.get(`${baseURL}/videos`);
-            console.log("the simple video response: ", response);
+            setInitialId(response.data[0].id);
             return response;
+
         } catch (error) {
-            console.log("the error is: ", error);
+
+            console.log("the error fetching the simple video data is: ", error);
+
         }
 
     }
@@ -39,19 +39,19 @@ function App() {
     const fetchVideo = async (id) => {
 
         try {
-            // const response = await axios.get(`${baseURL}/videos/${id}?api_key=${apiKey}`);
+    
             const response = await axios.get(`${baseURL}/videos/${id}`);
-            console.log("the detailed video response: ", response);
             return response;
+
         } catch (error) {
-            console.log("the error from the fetchVideo function: ", error);
+
+            console.log("the error fetching the detailed video data is: ", error);
+
         }
 
     }
 
     useEffect( () => {
-
-        const initialId = '84e96018-4022-434e-80bf-000ce4cd12b8'
 
         const getInitialVideo = async (id) => {
             const response = await fetchVideo(id);
@@ -59,7 +59,7 @@ function App() {
             setActiveDetails({
                 title: response.data.title,
                 author: response.data.channel,
-                date: formatTime(response.data.timestamp, {day: 1, month: 5, year: -54}, {norseDay: false}),
+                date: response.data.timestamp,
                 viewCount: response.data.views,
                 likeCount: response.data.likes,
                 description: response.data.description,
@@ -72,11 +72,7 @@ function App() {
 
         // the below logic checks to see if a user has refreshed the page after selecting a recommended video
         // if they have, then the component remounts using the params data
-        if (params.imageId) {
-            getInitialVideo(params.imageId)
-        } else {
-            getInitialVideo(initialId);
-        }
+        params.imageId ? getInitialVideo(params.imageId) : getInitialVideo(initialId);
 
     }, [params])
 

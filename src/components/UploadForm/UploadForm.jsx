@@ -1,6 +1,8 @@
 import './UploadForm.scss';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
 
 const UploadForm = () => {
 
@@ -9,14 +11,28 @@ const UploadForm = () => {
 
     const navigate = useNavigate();
 
+    const postVideo = async () => {
+        const baseURL = 'http://localhost:8080';
+        try {
+            const response = await axios.post(`${baseURL}/videos`, {
+                title: title,
+                description: description
+            })
+            console.log("post request response: ", response);
+            alert(`${title} Uploaded successfully, redirecting you to the home page.`);
+            navigate('/');
+        } catch (error) {
+            console.log("500 status error: ", error);
+        }
+    }
+
     const handleSubmit = (event) => {
         event.preventDefault();
 
         if (!title.trim() || !description.trim()) {
             alert("All fields are necessary to upload.");
         } else {
-            alert(`${title} Uploaded successfully, redirecting you to the home page.`);
-            navigate('/');
+            postVideo();
         }
         
     }
@@ -33,6 +49,7 @@ const UploadForm = () => {
         alert("Upload canceled.");
         setTitle('');
         setDescription('')
+        navigate('/');
     }
     
     return (

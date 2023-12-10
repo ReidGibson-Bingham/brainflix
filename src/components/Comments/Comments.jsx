@@ -52,7 +52,7 @@ const Comments = (props) => {
 
                                     <div className="comments__name-date-box">
                                         <p className="comments__name">{comment.name}</p>
-                                        <p className="comments__date">{formatTime(comment.timestamp, {day: 3, month: 2, year: -54}, {norseDay: false})}</p>
+                                        <p className="comments__date">{formatTime(comment.timestamp, {day: 3, month: 2, year: -54})}</p>
                                     </div>
 
                                     <p className="comments__display-comment">{comment.comment}</p>
