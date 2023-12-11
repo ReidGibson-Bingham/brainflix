@@ -18,7 +18,7 @@
     &__title {
         
         color: $silver;
-        font-weight: 500;
+        font-weight: $semiBold;
 
         @include desktop {
             font-size: $desktopFontS;
@@ -44,7 +44,7 @@
     &__still {
         height: 5rem;
         width: 7rem;
-        border-radius: 5%;
+        border-radius: 0.25rem;
 
         @include tablet {
             height: 6rem;
@@ -69,8 +69,7 @@
 
     &__info-title {
         
-        font-weight: $demiBold;
-        font-weight: 500;
+        font-weight: $semiBold;
         
     }
 }

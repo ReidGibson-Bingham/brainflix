@@ -2,17 +2,17 @@
 @import './../../styles/partials/variables';
 
 .upload-form {
-    padding: 1rem;
+    padding: $mobilePadding;
     display: flex;
     flex-direction: column;
 
     @include tablet {
-        padding-right: 2.25rem;
-        padding-left: 2.25rem;
+        padding-right: $tabletPadding;
+        padding-left: $tabletPadding;
     }
 
     @include desktop {
-        margin-right: 4.5rem;
+        margin-right: $desktopPadding;
         padding-left: 0rem;
         padding-right: 0rem;
         border-top: 1px solid #E1E1E1;
@@ -24,21 +24,21 @@
     &__title-title {
         color: silver;
         padding-bottom: 0.5rem;
-        font-weight: 400;
+        font-weight: $regularWeight;
     }
 
     &__title-input {
         padding: 0.5rem;
         background-color: $alabaster;
         border: 1px solid $mercury;
-        border-radius: 4px;
+        border-radius: 0.25rem;
     }
 
     &__description-title {
-        color: silver;
-        padding-top: 1rem;
+        color: $silver;
+        padding-top: $mobilePadding;
         padding-bottom: 0.5rem;
-        font-weight: 400;
+        font-weight: $regularWeight;
     }
 
     &__description-input {
@@ -65,7 +65,7 @@
         background-repeat: no-repeat;
         border-radius: 0.313rem;
         margin: 2rem 0rem;
-        padding: 1rem;
+        padding: $mobilePadding;
 
         @include tablet {
             width: 25%;
@@ -88,14 +88,13 @@
         background-position-y: center;
         background-repeat: no-repeat;
         border-radius: 0.313rem;
-        margin-bottom: 1rem;
-        padding: 1rem;
+        margin-bottom: $mobilePadding;
+        padding: $mobilePadding;
 
         @include tablet {
             width: 25%;
-            margin: 1rem;
+            margin: $mobilePadding;
         }
-
 
     }
 
@@ -105,7 +104,7 @@
             display: flex;
             flex-direction: row-reverse;
             border-top: 1px solid $mercury;
-            margin-top: 2.25rem;
+            margin-top: $tabletPadding;
         }
 
         @include desktop {

@@ -18,7 +18,6 @@ const UploadForm = () => {
                 title: title,
                 description: description
             })
-            console.log("post request response: ", response);
             alert(`${title} Uploaded successfully, redirecting you to the home page.`);
             navigate('/');
         } catch (error) {
