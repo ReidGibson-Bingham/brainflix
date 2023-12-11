@@ -48,7 +48,7 @@
 
         @include tablet {
             height: 6rem;
-            width: 9rem;
+            min-width: 9rem;
         }
     }
 

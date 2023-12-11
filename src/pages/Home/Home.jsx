@@ -21,7 +21,6 @@ function App() {
         try {
 
             const response = await axios.get(`${baseURL}/videos`);
-            setInitialId(response.data[0].id);
             return response;
 
         } catch (error) {
