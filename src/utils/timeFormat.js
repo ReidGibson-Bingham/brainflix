@@ -1,26 +1,13 @@
-export const formatTime = (timeInSeconds, offSetObj) => {
-    const msSinceEpoch = timeInSeconds;
-    const epochDate = new Date();
-    const adjustedDate = new Date(epochDate.getTime() + msSinceEpoch);
-    
-    if (offSetObj) {
-        adjustedDate.setFullYear(adjustedDate.getFullYear() + offSetObj.year);
-        adjustedDate.setMonth(adjustedDate.getMonth() + offSetObj.month);
-        adjustedDate.setDate(adjustedDate.getDate() + offSetObj.day);
-    }
+export const formatTime = (timestamp) => {
 
-    const options = {
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric',
-        weekday: 'short',
-        timeZone: 'America/Vancouver',
-        minimumIntegerDigits: 2,
-    };
+    const date = new Date(timestamp);
 
-    const year = adjustedDate.getFullYear().toLocaleString('en-CA', options);
-    const month = adjustedDate.getMonth().toLocaleString('en-CA', options);  // Adding 1 because getMonth() returns zero-based months
-    const day = adjustedDate.getDate().toLocaleString('en-CA', options);
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
 
-    return `${day}/${month}/${year.replace(/,/g, '')}`;
-};
+    const formattedDate = `${month >= 10 ? month : '0' + month}/${day >= 10 ? day : '0' + day}/${year}`;
+
+    return formattedDate;
+
+}

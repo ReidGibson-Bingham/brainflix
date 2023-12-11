@@ -18,7 +18,7 @@ const Recommended = (props) => {
 
                     return (
 
-                        <Link to={`/${video.id}`} key={index} className='recommended__link'>
+                        <Link to={`/video/${video.id}`} key={index} className='recommended__link'>
 
                             <li className='recommended__item' 
                             >

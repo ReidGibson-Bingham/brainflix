@@ -13,13 +13,9 @@ function App() {
 
     const params = useParams();
     const [activeVideo, setActiveVideo] = useState({});
-    const [activeDetails, setActiveDetails] = useState({});
-    const [activeComments, setActiveComments] = useState({commentCount: 0,comments: []})
     const [recommendedData, setRecommendedData] = useState([]);
-    const [initialId, setInitialId] = useState('84e96018-4022-434e-80bf-000ce4cd12b8');
     const baseURL = "http://localhost:8080";
     
-
     const fetchVideos = async () => {
 
         try {
@@ -51,28 +47,16 @@ function App() {
 
     }
 
+    const setVideoData = async (id) => {
+        const response = await fetchVideo(id);
+        setActiveVideo(response.data);
+    }
+
     useEffect( () => {
 
-        const getInitialVideo = async (id) => {
-            const response = await fetchVideo(id);
-            setActiveVideo(response.data);
-            setActiveDetails({
-                title: response.data.title,
-                author: response.data.channel,
-                date: response.data.timestamp,
-                viewCount: response.data.views,
-                likeCount: response.data.likes,
-                description: response.data.description,
-            });
-            setActiveComments({
-                commentCount: response.data.comments.length,
-                comments: response.data.comments
-            }) 
-        }
-
-        // the below logic checks to see if a user has refreshed the page after selecting a recommended video
-        // if they have, then the component remounts using the params data
-        params.imageId ? getInitialVideo(params.imageId) : getInitialVideo(initialId);
+        // if the imageId params exist, we set our id value to that. otherwise we set it to the initial Id. 
+        const id = params.imageId || '84e96018-4022-434e-80bf-000ce4cd12b8';
+        setVideoData(id);
 
     }, [params])
 
@@ -93,35 +77,40 @@ function App() {
     return (
         <>
 
-        <Header/>
+            <Header/>
 
-        <Hero
-            activeVideo={activeVideo}
-        />
-
-        <div className='desktop__switch-layout'>
-
-            <div className='desktop__comments'>
-
-            <Info
-            activeDetails={activeDetails}
+            <Hero
+                activeVideo={activeVideo}
             />
 
-            <Comments
-            activeComments={activeComments}
-            />
+            <div className='desktop__switch-layout'>
+
+                <div className='desktop__comments'>
+
+                <Info
+                    activeVideo={activeVideo}
+                />
+
+                <Comments
+                    commentData={
+                        {
+                            commentCount: activeVideo?.comments?.length || 0,
+                            comments: activeVideo?.comments || []
+                        }
+                    }
+                />
+
+                </div>
+
+                <aside className='desktop__side-videos'>
+                
+                <Recommended
+                    recommendedData={recommendedData}
+                />
+
+                </aside>
 
             </div>
-
-            <aside className='desktop__side-videos'>
-            
-            <Recommended
-                recommendedData={recommendedData}
-            />
-
-            </aside>
-
-        </div>
 
         </>
 

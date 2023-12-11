@@ -20,6 +20,7 @@
     }
 
     &__thumbnail {
+
         width: 100%;
         border-radius: 4px;
 
@@ -35,6 +36,8 @@
     &__title {
         padding-top: 1rem;
         padding-bottom: 2rem;
+        font-size: 28px;
+        font-weight: 500;
 
         @include tablet {
             padding-top: 2.25rem;
@@ -51,6 +54,7 @@
     &__thumbnail-title {
         color: $silver;
         padding-bottom: 1rem;
+        font-weight: 400;
 
         @include tablet {
             padding-top: 2.25rem;

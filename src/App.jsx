@@ -22,7 +22,7 @@ function App() {
           />
 
           <Route
-            path="/:imageId"
+            path="/video/:imageId"
             element={
               <Home/>
             }

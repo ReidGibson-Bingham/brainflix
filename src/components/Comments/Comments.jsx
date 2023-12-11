@@ -5,12 +5,14 @@ import { formatTime } from "./../../utils/timeFormat.js";
 
 const Comments = (props) => {
 
+    const {commentCount, comments} = props.commentData;
+
     return (
 
         <section className="comments">
 
             <h4 className="comments__count">
-                {props.activeComments.commentCount} Comments
+                {commentCount} Comments
             </h4>
         
             <article className="comments__form">
@@ -38,7 +40,7 @@ const Comments = (props) => {
             <article className="comments__display">
                 <p className="comments__display-divider"></p>
             
-                {props.activeComments.comments.map((comment, index) => {
+                {comments.map((comment, index) => {
                     return (
                         <article key={index}>
                             <div className="comments__display-box">
@@ -52,7 +54,7 @@ const Comments = (props) => {
 
                                     <div className="comments__name-date-box">
                                         <p className="comments__name">{comment.name}</p>
-                                        <p className="comments__date">{formatTime(comment.timestamp, {day: 3, month: 2, year: -54})}</p>
+                                        <p className="comments__date">{formatTime(comment.timestamp)}</p>
                                     </div>
 
                                     <p className="comments__display-comment">{comment.comment}</p>
