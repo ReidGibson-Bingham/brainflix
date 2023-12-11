@@ -1,3 +1,5 @@
+@use 'typography' as *;
+
 $mercury: #E1E1E1;
 $silver: #AFAFAF;
 $alabaster: #FAFAFA;
@@ -10,3 +12,5 @@ $desktopFontS: 1.125rem;
 $desktopFontB: 2.25rem;
 
 $demiBold: 600;
+
+$font-stack: 'Avenir', sans-serif;
