@@ -16,7 +16,10 @@
     }
 
     &__title {
+        
         color: $silver;
+        font-weight: 500;
+
         @include desktop {
             font-size: $desktopFontS;
         }

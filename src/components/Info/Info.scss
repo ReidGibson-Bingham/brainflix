@@ -18,6 +18,7 @@
 
     &__title {
         padding-bottom: $mobilePadding;
+        font-weight: 500;
 
         @include desktop {
             font-size: $desktopFontB;
@@ -50,7 +51,12 @@
         }
     }
 
+    &__params-author {
+        font-weight: 500;
+    }
+
     &__params-date {
+        font-weight: 400;
         color: $silver;
     }
 
@@ -78,6 +84,7 @@
     }
 
     &__params-like-count {
+        font-weight: 400;
         color: $silver;
     }
 
@@ -86,6 +93,7 @@
     }
 
     &__params-view-count {
+        font-weight: 400;
         color: $silver;
     }
 
