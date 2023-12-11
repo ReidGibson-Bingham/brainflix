@@ -18,6 +18,7 @@
 
     &__title {
         padding-bottom: $mobilePadding;
+        font-weight: $semiBold;
 
         @include desktop {
             font-size: $desktopFontB;
@@ -46,11 +47,16 @@
         }
 
         @include desktop {
-            font-size: 18px;
+            font-size: 1.125rem;
         }
     }
 
+    &__params-author {
+        font-weight: $semiBold;
+    }
+
     &__params-date {
+        font-weight: $regularWeight;
         color: $silver;
     }
 
@@ -78,7 +84,9 @@
     }
 
     &__params-like-count {
+        font-weight: $regularWeight;
         color: $silver;
+        padding-left: 0.5rem
     }
 
     &__params-view-box {
@@ -86,7 +94,9 @@
     }
 
     &__params-view-count {
+        font-weight: $regularWeight;
         color: $silver;
+        padding-left: 0.5rem
     }
 
     &__description {

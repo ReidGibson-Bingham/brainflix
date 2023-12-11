@@ -1,9 +1,6 @@
 import './UploadHero.scss';
-import { useParams } from "react-router-dom";
 
 const UploadHero = (props) => {
-
-    const params = useParams();
 
     return (
         <section className="upload-hero">

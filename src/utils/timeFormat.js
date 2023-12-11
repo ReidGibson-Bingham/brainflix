@@ -1,27 +1,13 @@
-export const formatTime = (timeInSeconds, offSetObj, boolObj) => {
-    const msSinceEpoch = timeInSeconds;
-    const epochDate = new Date();
-    const adjustedDate = new Date(epochDate.getTime() + msSinceEpoch);
+export const formatTime = (timestamp) => {
 
-    // Apply offset if provided
-    if (offSetObj) {
-        adjustedDate.setFullYear(adjustedDate.getFullYear() + offSetObj.year);
-        adjustedDate.setMonth(adjustedDate.getMonth() + offSetObj.month);
-        adjustedDate.setDate(adjustedDate.getDate() + offSetObj.day);
-    }
+    const date = new Date(timestamp);
 
-    const year = adjustedDate.getFullYear();
-    const month = adjustedDate.getMonth() + 1; // Adding 1 because getMonth() returns zero-based months
-    const day = adjustedDate.getDate();
-    
-    const dayOfWeek = adjustedDate.getDay();
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const year = date.getFullYear();
 
-    const daysOfWeek = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
+    const formattedDate = `${month >= 10 ? month : '0' + month}/${day >= 10 ? day : '0' + day}/${year}`;
 
-    if (boolObj.norseDay) {
-        return `${daysOfWeek[dayOfWeek]} ${day}/${month}/${year}`;
-    } else {
-        return `${day}/${month}/${year}`;
-    }
-    
-};
+    return formattedDate;
+
+}

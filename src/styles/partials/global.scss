@@ -1,10 +1,11 @@
-@import './mixins';
+@use './typography' as *;
+@use './variables' as *;
+// @import './mixins';
 
-@include font-face('AvenirNextLTPro-Regular');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box; 
-    font-family: 'AvenirNextLTPro-Regular', sans-serif;
+    font-family: $font-stack;
   }
